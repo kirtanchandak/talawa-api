@@ -20,7 +20,7 @@ jobs:
   ##############################################################################
   # This section is added so that the Talawa Docs repository and Talawa API
   # are both updated with the latest schema docs post merge.
-  ##############################################################################
+  ################################################################################
 
   Push-Workflow:
     name: Updating Documentation
