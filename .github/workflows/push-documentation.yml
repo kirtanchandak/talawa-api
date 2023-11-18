@@ -138,6 +138,6 @@ jobs:
         if: github.ref == 'refs/heads/develop'
         env:
           deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
-          MONGO_DB_URL: "mongodb+srv://cornellblog:1234567890@cornellblog.4c5hnap.mongodb.net/?retryWrites=true&w=majority"
+          MONGO_DB_URL: ${{ secrets.MONGO_DB_URL }}
         run: |
           curl "$deploy_url"
