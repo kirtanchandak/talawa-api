@@ -113,7 +113,7 @@ jobs:
       - name: Sync schema.json from Talawa API to Talawa Docs
         run: cp api/docs/schema.json docs/docs/github-actions/
 
-      # Add the updated schema.json in Talawa Docs to stage
+      # Add the updated schema.json in Talawa Docs to stagee
       - name: Add the synced schema.json to stage in Talawa Docs
         run: cd docs && git add docs/github-actions/schema.json
 
