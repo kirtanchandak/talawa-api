@@ -1,11 +1,12 @@
 import "dotenv/config";
 import mongoose from "mongoose";
+import { MONGO_DB_URL } from "../../src/constants";
 
 // Returns a mongoose instance to the testing database
 export async function connect(
   dbName = "TALAWA_API_TEST_DATABASE"
 ): Promise<typeof mongoose> {
-  return await mongoose.connect(process.env.MONGO_DB_URL as string, {
+  return await mongoose.connect(MONGO_DB_URL as string, {
     dbName,
     useCreateIndex: true,
     useUnifiedTopology: true,
