@@ -101,7 +101,7 @@ jobs:
           repository: api
       
       # We will clone the Talawa Docs in the folder called docs so that we can copy the generated
-      # schema.json into the same later
+      # schema.json into the same laterr
       - name: Checkout the Talawa-Docs repository
         uses: actions/checkout@v3
         with:
