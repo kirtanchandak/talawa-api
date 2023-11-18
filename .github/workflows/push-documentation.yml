@@ -137,5 +137,6 @@ jobs:
         if: github.ref == 'refs/heads/develop'
         env:
           deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+          MONGO_DB_URL: mongodb://localhost:27017/talawa-test-db
         run: |
           curl "$deploy_url"
