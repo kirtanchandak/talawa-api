@@ -123,3 +123,16 @@ jobs:
         with:
           commit_message: Update schema.json
           repository: docs
+
+  Deploy-Production:
+    name: Deploy to Render.com
+    runs-on: ubuntu-latest
+    environment: production
+    needs: Push-Workflow
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        env: 
+          deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: 
+          curl "$deploy_url"
